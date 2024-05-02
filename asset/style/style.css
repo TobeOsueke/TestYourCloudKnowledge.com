@@ -6,9 +6,9 @@
     text-align: center;
 }
 #h1-div {
-    background-color: #0e3d53;
-    color: white;
-    border: solid;
+    background-color: white;
+    color: #800020;
+    border: outset;
 }
 #footer {
     background-color: #0e3d53;
@@ -18,4 +18,21 @@
 h2 {
     color:#800020;
     
+}
+.top-level {
+    /* Aligns the children items in a row direction */
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.sub-level1 {
+    margin-left: 2%;
+    width: 60%;
+    height:auto;
+}
+.sub-level2 {
+    border-left: 4px solid #8c3902;
+    margin-left: 3%;
+    width: 28%;
+    height:auto;
 }
