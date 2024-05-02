@@ -1,0 +1,21 @@
+.common-img-style {
+    max-width: 100%; 
+    height: auto; 
+}
+.textCenter {
+    text-align: center;
+}
+#h1-div {
+    background-color: #0e3d53;
+    color: white;
+    border: solid;
+}
+#footer {
+    background-color: #0e3d53;
+    color: white;
+    border: solid;
+}
+h2 {
+    color:#800020;
+    
+}
