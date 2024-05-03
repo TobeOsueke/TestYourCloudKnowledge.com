@@ -6,7 +6,6 @@
     text-align: center;
 }
 #h1-div {
-    background-color: white;
     color: #800020;
     border: outset;
 }
@@ -35,4 +34,11 @@ h2 {
     margin-left: 3%;
     width: 28%;
     height:auto;
+}
+#register-div {
+    /* Centre align register form */
+        margin: auto;
+        width: 50%;
+        border: 3px outset;
+        padding: 10px;
 }
