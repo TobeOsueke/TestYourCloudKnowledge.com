@@ -10,7 +10,15 @@ runOnPageLoad()
 function userNameDisplay() {
     // Use template literals with backticks?
     let html = `
-    <p>Hi ${userName}</p>
+    Hi ${userName}
     `;
     document.getElementById("username-display").innerHTML = html;
+}
+
+function startTest() {
+    let rulesElement = document.getElementById("rules");
+    rulesElement.style.display = "none";
+    let clickToStart = document.getElementById("click-to-start");
+    clickToStart.style.display = "none";
+    
 }

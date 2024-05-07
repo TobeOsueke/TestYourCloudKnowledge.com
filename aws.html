@@ -29,13 +29,19 @@
 
         <!--Section to display AWS image and Test Rules-->
         <div class="top-level"> 
+            
             <div class="sub-level2">
                 <img class="common-img-style" src="asset/images/aws.png" alt="Azure and AWS picture">
             </div>
+
             <div class="sub-level1">
-                <h3>Test Rules:</h3>
-                <ul>
+
+                <span id="rules">
+                    <h3 id="test-rule-h3-element">Test Rules:</h3>
+                <p>You MUST Read all the below instructions.</p>
+                <ul id="rule-list">
                     <li>You will have 15 minutes to complete this test.</li>
+                    <li>DON'T refresh page after you have clicked the start test button. If you do, your test session will be lost and you will have to start again.</li>
                     <li>Test is made up of 15 questions. you have 1 minutes for each questions.</li>
                     <li>All questions are objectives. You are expected to pick one correct answer.</li>
                     <li>The test will automatically end when the time elaspe or you can end it by clicking Submit button.</li>
@@ -43,14 +49,25 @@
                     <li>You should not use the internet or ask any other individual questions when writing this test.</li>
                     <li>Once you click the start button, the test will start.</li>
                 </ul>
+                </span>
+
+                <div id="question-container">
+                    <div id="question"></div>
+                    <div id="options"></div>
+                </div>
+                
+                <button id="next-btn" hidden>Next</button>
             </div>
         
         </div>
         
         <!--Display Start Test Button-->
-        <p>Click the Start Button when you are ready to start</p>
-        <button type="button">Start Test!</button>
-        <br><br>
+        <div id="click-to-start" >
+            <p>Click the Start Button when you are ready to start</p>
+            <button type="button" onclick="startTest()">Start Test!</button>
+            <br><br>
+        </div>
+        
 
        
         <footer id="footer">
