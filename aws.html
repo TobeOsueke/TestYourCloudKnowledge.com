@@ -9,6 +9,13 @@
     </head>
         
     <body>
+        <script>
+            const searchParams = new URLSearchParams(window.location.search);
+            if (!searchParams.has('user')) {
+                window.location.replace("register.html");
+            }
+            let userName = searchParams.get('user');
+        </script>
 
         <section>
             <img id="banner" class="common-img-style" src="asset/images/banner.png" alt="Site banner">       
@@ -18,19 +25,38 @@
             </div><br>
         </section>
         
-            
-        <span> 
-            <img class="common-img-style" src="asset/images/aws.png" alt="Azure and AWS picture">
-            <h3>Test Rules:</h3>
-            <ul>
-                <li>You will have 15 minutes to complete this test</li>
-                <li>Test is made up of 15 questions. you have 1 minutes for each questions</li>
-                <l>All questions are objectives. You are expected to pick only one correct answer.</l>
-            </ul>
+        <div id="username-display">
+            <script>
+                // Use template literals with backticks?
+                let html = `
+                <p>Hi ${userName}</p>
+                `;
+                document.getElementById("username-display").innerHTML = html;
+            </script>
+        </div>   
 
+        <div class="top-level"> 
+            <div class="sub-level2">
+                <img class="common-img-style" src="asset/images/aws.png" alt="Azure and AWS picture">
+            </div>
+            <div class="sub-level1">
+                <h3>Test Rules:</h3>
+                <ul>
+                    <li>You will have 15 minutes to complete this test.</li>
+                    <li>Test is made up of 15 questions. you have 1 minutes for each questions.</li>
+                    <li>All questions are objectives. You are expected to pick one correct answer.</li>
+                    <li>The test will automatically end when the time elaspe or you can end it by clicking Submit button.</li>
+                    <li>You result will be displayed at the end of the test.</li>
+                    <li>You should not use the internet or ask any other individual questions when writing this test.</li>
+                    <li>Once you click the start button, the test will start.</li>
+                </ul>
+            </div>
         
-        </span>
-       
+        </div>
+        
+        <p>Click the Start Button when you are ready to start</p>
+        <button type="button">Start Test!</button>
+        <br><br>
 
        
         <footer id="footer">
@@ -38,7 +64,7 @@
         </footer>
        
             
-      
+        
 
     </body>
 
