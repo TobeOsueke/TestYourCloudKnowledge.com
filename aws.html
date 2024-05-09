@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <title>Test Your Cloud Knowledge</title>
-        <link href="asset/style/style.css" rel="stylesheet">
-       
-    </head>
-        
-    <body>
-        <script src="javascript/aws.js" type="text/javascript"> </script>
 
-        <!---Header-->
-        <section>
-            <img id="banner" class="common-img-style" src="asset/images/banner.png" alt="Site banner">       
-            <br>
-            <div id="h1-div">
-                <h1 class="textCenter">Amazon Web Services Test Zone</h1>
-            </div><br>
-        </section>
-        
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Test Your Cloud Knowledge</title>
+    <link href="asset/style/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="javascript/aws.js" type="text/javascript"> </script>
+
+    <!---Header-->
+    <section>
+        <img id="banner" class="common-img-style" src="asset/images/banner.png" alt="Site banner">
+        <br>
+        <div id="h1-div">
+            <h1 class="textCenter">Amazon Web Services Test Zone</h1>
+        </div><br>
+    </section>
+
     <!--Div Section to display Username-->
-        <div id="username-display">
-            <script>
-                userNameDisplay()
-            </script>
-        </div>   
+    <div id="username-display">
+        <script>
+            userNameDisplay()
+        </script>
+    </div>
 
-        <!--Section to display AWS image and Test Rules-->
-        <div class="top-level"> 
-            
-            <div class="sub-level2">
-                <img class="common-img-style" src="asset/images/aws.png" alt="Azure and AWS picture">
-            </div>
+    <!--Section to display AWS image and Test Rules-->
+    <div class="top-level">
 
-            <div class="sub-level1">
+        <div class="sub-level2">
+            <img class="common-img-style" src="asset/images/aws.png" alt="Azure and AWS picture">
+        </div>
 
-                <span id="rules">
-                    <h3 id="test-rule-h3-element">Test Rules:</h3>
+        <div class="sub-level1">
+
+            <span id="rules">
+                <h3 id="test-rule-h3-element">Test Rules:</h3>
                 <p>You MUST Read all the below instructions.</p>
                 <ul id="rule-list">
                     <li>You will have 15 minutes to complete this test.</li>
-                    <li>DON'T refresh page after you have clicked the start test button. If you do, your test session will be lost and you will have to start again.</li>
+                    <li>DON'T refresh page after you have clicked the start test button. If you do, your test session
+                        will be lost and you will have to start again.</li>
                     <li>Test is made up of 15 questions. you have 1 minutes for each questions.</li>
                     <li>All questions are objectives. You are expected to pick one correct answer.</li>
-                    <li>The test will automatically end when the time elaspe or you can end it by clicking Submit button.</li>
+                    <li>The test will automatically end when the time elaspe or you can end it by clicking Submit
+                        button.</li>
                     <li>You result will be displayed at the end of the test.</li>
-                    <li>You should not use the internet or ask any other individual questions when writing this test.</li>
+                    <li>You should not use the internet or ask any other individual questions when writing this test.
+                    </li>
                     <li>Once you click the start button, the test will start.</li>
+                    <li>You can return to previous questions, after you click next</li>
+                    <li>Click the submit button to submit the test when done</li>
                 </ul>
-                </span>
+            </span>
 
-                <div id="question-container">
-                    <div id="question"></div>
-                    <div id="options"></div>
-                </div>
-                
-                <button id="next-btn" hidden>Next</button>
+            <div id="question-container">
+                <div id="question"></div>
+                <div id="options"></div>
             </div>
-        
-        </div>
-        
-        <!--Display Start Test Button-->
-        <div id="click-to-start" >
-            <p>Click the Start Button when you are ready to start</p>
-            <button type="button" onclick="startTest()">Start Test!</button>
+
             <br><br>
+            <button id="next-btn" onclick="showNextQuestion()" hidden>Next</button>
+            <button id="submit-btn" onclick="showNextQuestion()" hidden>Submit Test</button>
+            <br>
+            <div id="score"></div>
+            <br>
+            <div id="question-answers"></div>
+            <br>
+
         </div>
-        
 
-       
-        <footer id="footer">
-                <p class="textCenter">Copyright © TestYourCloudKnowledge.com 2024</p>
-        </footer>
-       
-            
-        
+    </div>
 
-    </body>
+    <!--Display Start Test Button-->
+    <div id="click-to-start">
+        <p>Click the Start Button when you are ready to start</p>
+        <button type="button" onclick="startTest()">Start Test!</button>
+        <br><br>
+    </div>
+
+
+
+    <footer id="footer">
+        <p class="textCenter">Copyright © TestYourCloudKnowledge.com 2024</p>
+    </footer>
+
+
+
+
+
+</body>
 
 </html>

@@ -2,15 +2,15 @@ let registerForm = document.getElementById('register-form');
 registerForm.addEventListener('submit', userRegistration);
 
 function userRegistration(event) {
-    // Prevent the form from being submitted
-    event.preventDefault();
+  // Prevent the form from being submitted
+  event.preventDefault();
 
-    //get field value
-    let userName = registerForm.elements['username'].value;
-    // window.alert(userName);
+  //get field value
+  let userName = registerForm.elements['username'].value;
+  // window.alert(userName);
 
   // Use template literals with backticks?
-    let welcomeHTML = `
+  let welcomeHTML = `
     <div >
     <h2>Welcome ${userName}</h2>
     <p>Select a cloud provider?</p>
@@ -21,7 +21,7 @@ function userRegistration(event) {
     </div>
     `;
 
-    let registerDiv = document.getElementById('register-div');
-    registerDiv.innerHTML = welcomeHTML;
+  let registerDiv = document.getElementById('register-div');
+  registerDiv.innerHTML = welcomeHTML;
 
 }
