@@ -348,6 +348,10 @@ function displayScore() {
             questionAnswersElem.appendChild(icon);
         }
         else {
+            //first check if answer is undefined
+            if (typeof userAnswer === "undefined") {
+                userAnswer = " "
+            }
             icon.classList.add("wrong-icon");
             icon.textContent = "\u2717 Your Answer: " + userAnswer; //Unicode character for checkmark symbol
             questionAnswersElem.appendChild(icon);
@@ -358,6 +362,11 @@ function displayScore() {
         questionAnswersElem.appendChild(document.createElement("br"));
         questionAnswersElem.appendChild(document.createElement("br"));
     }
+
+    let homeLink = document.createElement("a");
+    homeLink.textContent = "Go Back To Home Page"
+    homeLink.href = "index.html"
+    questionAnswersElem.appendChild(homeLink)
 
     //document.getElementById("next-btn").disabled = true;
 }
