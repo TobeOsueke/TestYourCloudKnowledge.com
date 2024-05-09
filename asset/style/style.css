@@ -23,6 +23,13 @@ h2 {
 
 }
 
+#username-p {
+    text-align: right;
+    font-size: 20px;
+    font-style: italic;
+    color: #8c3902;
+}
+
 .top-level {
     /* Aligns the children items in a row direction */
     display: flex;

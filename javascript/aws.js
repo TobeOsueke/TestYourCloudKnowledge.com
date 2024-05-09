@@ -10,7 +10,7 @@ runOnPageLoad()
 function userNameDisplay() {
     // Use template literals with backticks?
     let html = `
-    Hi ${userName}
+    <p id="username-p"> Hi ${userName} </p>
     `;
     document.getElementById("username-display").innerHTML = html;
 }
@@ -355,6 +355,7 @@ function displayScore() {
             userResultElem.textContent = " Correct Answer: " + correctAnswer;
             questionAnswersElem.appendChild(userResultElem);
         }
+        questionAnswersElem.appendChild(document.createElement("br"));
         questionAnswersElem.appendChild(document.createElement("br"));
     }
 
