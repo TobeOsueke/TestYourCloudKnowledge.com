@@ -60,3 +60,10 @@ h2 {
     color: red;
     font-size: 18px;
 }
+
+#score {
+    color: #800020;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px
+}

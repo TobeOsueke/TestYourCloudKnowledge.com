@@ -335,6 +335,7 @@ function displayScore() {
         let question = questions[userQuestions[i]];
         let resultElem = document.createElement("div");
         resultElem.textContent = "Question " + (i + 1) + ": " + question.question;
+        resultElem.style.fontWeight = "bold";
         questionAnswersElem.appendChild(resultElem);
 
         //Display icon based on whether user got the correct answer or not
@@ -354,6 +355,7 @@ function displayScore() {
             userResultElem.textContent = " Correct Answer: " + correctAnswer;
             questionAnswersElem.appendChild(userResultElem);
         }
+        questionAnswersElem.appendChild(document.createElement("br"));
     }
 
     //document.getElementById("next-btn").disabled = true;
