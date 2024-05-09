@@ -273,7 +273,7 @@ function showNextQuestion() {
     currentIndex++;
 
     //hide next button and show submit button when on the last question
-    if (currentIndex == 1) {
+    if (currentIndex == 14) {
         let nextBtn = document.getElementById("next-btn");
         nextBtn.style.display = "none";
         let submitBtn = document.getElementById("submit-btn");
@@ -281,7 +281,7 @@ function showNextQuestion() {
     }
 
     //display questions and their options using radio button
-    if (currentIndex < 2) {
+    if (currentIndex < 15) {
         randomNumber = Math.floor(Math.random() * 31); //generate random numbers between 1-30 to display random questions
         userQuestions.push(randomNumber);
         let question = questions[randomNumber];
@@ -290,7 +290,7 @@ function showNextQuestion() {
         questionElem.textContent = questionNumberToView + ". " + question.question;  //display question and it number
         let optionsElem = document.getElementById("options");
         optionsElem.innerHTML = "";
-        for (let i = 0; i < question.options.length; i++) {
+        for (let i = 0; i < question.options.length; i++) {  //creating radio button for each options and appending it to parent element
             let option = question.options[i];
             let radioBtn = document.createElement("input");
             radioBtn.type = "radio";
