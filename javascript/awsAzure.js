@@ -40,9 +40,317 @@ function startTest() {
 
 }
 
-
-//AWS test Questions, Options and answers
-var questions = [
+var url = window.location.pathname;
+console.log(url);
+var question; 
+if (url.includes("azure.html")) {
+    questions = [
+        {
+            question: "What is Azure DevOps?",
+            options: [
+                "A cloud-based version control system",
+                "A platform for managing software development projects",
+                "An operating system for cloud servers",
+                "A programming language"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which Azure service is used for hosting web applications?",
+            options: [
+                "Azure Virtual Machines",
+                "Azure App Service",
+                "Azure Kubernetes Service",
+                "Azure Functions"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is Azure Blob Storage used for?",
+            options: [
+                "Structured data storage",
+                "Storing large amounts of unstructured data",
+                "Relational database management",
+                "In-memory caching"
+            ],
+            answer: 1
+        },
+        {
+            question: "What does Azure Virtual Network allow you to do?",
+            options: [
+                "Host virtual machines only",
+                "Connect Azure resources to each other and to on-premises resources securely",
+                "Store and manage data in a distributed manner",
+                "Automate deployment of resources"
+            ],
+            answer: 1
+        },
+        {
+            question: "What Azure service is used for real-time analytics and data processing?",
+            options: [
+                "Azure SQL Database",
+                "Azure Cosmos DB",
+                "Azure Stream Analytics",
+                "Azure Data Lake Storage"
+            ],
+            answer: 2
+        },
+        {
+            question: "Which Azure service provides serverless computing?",
+            options: [
+                "Azure Functions",
+                "Azure Virtual Machines",
+                "Azure Kubernetes Service",
+                "Azure App Service"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is Azure Active Directory used for?",
+            options: [
+                "Hosting websites",
+                "Identity and access management",
+                "Data warehousing",
+                "Running virtual machines"
+            ],
+            answer: 1
+        },
+        {
+            question: "What Azure service is used for Internet of Things (IoT) solutions?",
+            options: [
+                "Azure Data Factory",
+                "Azure IoT Hub",
+                "Azure Event Grid",
+                "Azure Logic Apps"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is Azure Functions?",
+            options: [
+                "A container orchestration service",
+                "A serverless compute service",
+                "A relational database service",
+                "A message broker service"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which Azure service is used for big data analytics and AI?",
+            options: [
+                "Azure Synapse Analytics",
+                "Azure Machine Learning",
+                "Azure Data Lake Storage",
+                "Azure Data Factory"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the Azure service for building, testing, deploying, and managing applications and services?",
+            options: [
+                "Azure DevOps",
+                "Azure Logic Apps",
+                "Azure API Management",
+                "Azure Kubernetes Service"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which Azure service provides scalable cloud storage?",
+            options: [
+                "Azure Virtual Machines",
+                "Azure Blob Storage",
+                "Azure SQL Database",
+                "Azure Functions"
+            ],
+            answer: 1
+        },
+        {
+            question: "What does Azure Cosmos DB provide?",
+            options: [
+                "Structured query language (SQL) database service",
+                "Relational database service",
+                "NoSQL database service",
+                "In-memory caching service"
+            ],
+            answer: 2
+        },
+        {
+            question: "What is Azure Kubernetes Service (AKS)?",
+            options: [
+                "A container orchestration service",
+                "A serverless compute service",
+                "A relational database service",
+                "A message broker service"
+            ],
+            answer: 0
+        },
+        {
+            question: "What Azure service is used for hosting databases in the cloud?",
+            options: [
+                "Azure Functions",
+                "Azure App Service",
+                "Azure SQL Database",
+                "Azure Event Grid"
+            ],
+            answer: 2
+        },
+        {
+            question: "What does Azure SQL Database offer?",
+            options: [
+                "Relational database management",
+                "NoSQL database management",
+                "In-memory caching",
+                "File storage"
+            ],
+            answer: 0
+        },
+        {
+            question: "What Azure service provides data integration and transformation at scale?",
+            options: [
+                "Azure Logic Apps",
+                "Azure Event Grid",
+                "Azure Data Factory",
+                "Azure IoT Hub"
+            ],
+            answer: 2
+        },
+        {
+            question: "What is Azure Cognitive Services used for?",
+            options: [
+                "Hosting websites",
+                "Identity and access management",
+                "Big data analytics",
+                "Artificial intelligence and machine learning"
+            ],
+            answer: 3
+        },
+        {
+            question: "What does Azure Event Grid do?",
+            options: [
+                "Processes data in real-time",
+                "Manages containers",
+                "Automates deployment",
+                "Integrates data sources"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is Azure App Service used for?",
+            options: [
+                "Hosting virtual machines",
+                "Building, deploying, and scaling web apps",
+                "Hosting databases",
+                "Processing big data"
+            ],
+            answer: 1
+        },
+        {
+            question: "What does Azure IoT Hub enable?",
+            options: [
+                "Real-time analytics",
+                "Device-to-cloud and cloud-to-device communication",
+                "Container orchestration",
+                "Data warehousing"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the purpose of Azure Container Instances (ACI)?",
+            options: [
+                "Orchestrating container deployments",
+                "Running individual containers without managing servers",
+                "Managing virtual machines",
+                "Automating CI/CD pipelines"
+            ],
+            answer: 1
+        },
+        {
+            question: "What Azure service is used for event-driven serverless computing?",
+            options: [
+                "Azure Functions",
+                "Azure Virtual Machines",
+                "Azure App Service",
+                "Azure Kubernetes Service"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is Azure Logic Apps used for?",
+            options: [
+                "Orchestrating workflows and integrating systems",
+                "Hosting databases",
+                "Processing big data",
+                "Managing virtual machines"
+            ],
+            answer: 0
+        },
+        {
+            question: "What does Azure Synapse Analytics provide?",
+            options: [
+                "Big data analytics and data warehousing",
+                "Artificial intelligence and machine learning",
+                "In-memory caching",
+                "Serverless computing"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is Azure Data Lake Storage used for?",
+            options: [
+                "Structured data storage",
+                "Storing large amounts of unstructured data",
+                "Relational database management",
+                "In-memory caching"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is Azure Key Vault used for?",
+            options: [
+                "Identity and access management",
+                "Big data analytics",
+                "Security management and secrets storage",
+                "Orchestrating workflows"
+            ],
+            answer: 2
+        },
+        {
+            question: "What does Azure Functions provide?",
+            options: [
+                "Scalable cloud storage",
+                "Serverless compute service",
+                "Data integration and transformation at scale",
+                "Identity and access management"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is Azure API Management used for?",
+            options: [
+                "Orchestrating workflows and integrating systems",
+                "Managing APIs",
+                "Processing big data",
+                "Security management"
+            ],
+            answer: 1
+        },
+        {
+            question: "What Azure service is used for hosting databases in a fully managed PaaS environment?",
+            options: [
+                "Azure SQL Database",
+                "Azure Blob Storage",
+                "Azure Cosmos DB",
+                "Azure Data Lake Storage"
+            ],
+            answer: 0
+        }
+    ];
+    
+}
+else if (url.includes("aws.html")) {
+    //AWS test Questions, Options and answers
+questions = [
     {
         question: "What is the primary purpose of Amazon EC2?",
         options: ["To manage DNS records for web applications", "To provide scalable and resizable compute capacity in the cloud", "To distribute content to end-users with low latency", "To store and manage large datasets"],
@@ -255,6 +563,11 @@ var questions = [
     }
 
 ];
+}
+else {
+    window.location.replace("register.html");
+}
+
 
 //declaring global variables
 let userAnswers = [];
@@ -382,7 +695,7 @@ function displayScore() {
 
 function countdownTimer(duration, displayElement) {
     let timer = duration, minutes, seconds;
-
+    document.getElementById("timer-div").appendChild(displayElement);
     let intervalId = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -391,20 +704,17 @@ function countdownTimer(duration, displayElement) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         displayElement.textContent = minutes + ":" + seconds;
-        document.getElementById("timer-div").appendChild(displayElement)
 
         if (--timer == 0) {
-            //clearInterval(intervalId); // Stop the interval
+            clearInterval(intervalId); // Stop the interval
             endTestBasedonTimer()
         }
     }, 1000);
 
-    if (timer == 0) {
-        clearInterval(intervalId); // Stop the interval
-    }
+
 }
 
-
+//this function is called when the timer elapses
 function endTestBasedonTimer() {
     var selectedOption = document.querySelector('input[name="option"]:checked');
     if (selectedOption) {
