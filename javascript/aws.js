@@ -23,6 +23,7 @@ function startTest() {
         let clickToStart = document.getElementById("click-to-start");
         clickToStart.remove();  //remove click to start div element
 
+        countdownTimer(60 * 15, document.createElement("div")); // 15 minutes in seconds and div element
 
         showNextQuestion(); // Show the first question
         let nextBtn = document.getElementById("next-btn");
@@ -369,5 +370,40 @@ function displayScore() {
     questionAnswersElem.appendChild(homeLink)
 
     //document.getElementById("next-btn").disabled = true;
+}
+
+
+function countdownTimer(duration, displayElement) {
+    let timer = duration, minutes, seconds;
+    let intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        displayElement.textContent = minutes + ":" + seconds;
+
+        if (--timer == 0) {
+            clearInterval(intervalId); // Stop the interval
+            endTestBasedonTimer()
+        }
+    }, 1000);
+    document.getElementById("timer-div").appendChild(displayElement)
+}
+
+function endTestBasedonTimer() {
+    var selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        var userAnswer = parseInt(selectedOption.value);
+        userAnswers.push(userAnswer);
+        var correctAnswer = questions[randomNumber].answer;
+        if (userAnswer === correctAnswer) {
+            score++;
+        }
+    }
+    let nextBtn = document.getElementById("next-btn");
+    nextBtn.style.display = "none";
+    displayScore();
 }
 
