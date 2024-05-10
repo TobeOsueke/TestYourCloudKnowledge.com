@@ -25,9 +25,13 @@ function startTest() {
 
         countdownTimer(60 * 15, document.createElement("div")); // 15 minutes in seconds and div element
 
-        showNextQuestion(); // Show the first question
-        let nextBtn = document.getElementById("next-btn");
-        nextBtn.style.display = "block";   //display next button
+        setTimeout(function () {
+            // code to be executed after 1 sec delay
+            showNextQuestion(); // Show the first question
+            let nextBtn = document.getElementById("next-btn");
+            nextBtn.style.display = "block";   //display next button
+        }, 1000);
+
     }
     else {
         txt = "You pressed Cancel!";
@@ -36,7 +40,8 @@ function startTest() {
 
 }
 
-//test Questions, Options and answers
+
+//AWS test Questions, Options and answers
 var questions = [
     {
         question: "What is the primary purpose of Amazon EC2?",
@@ -321,6 +326,8 @@ function displayScore() {
     optionsDiv.remove();  //remove options div element
     let submitBtn = document.getElementById("submit-btn");
     submitBtn.remove();  //remove submit button div element
+    let timerDiv = document.getElementById("timer-div")
+    timerDiv.remove();  //since test has ended, remove timer
 
     //display score
     let scoreElem = document.getElementById("score");
@@ -375,6 +382,7 @@ function displayScore() {
 
 function countdownTimer(duration, displayElement) {
     let timer = duration, minutes, seconds;
+
     let intervalId = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -383,14 +391,19 @@ function countdownTimer(duration, displayElement) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         displayElement.textContent = minutes + ":" + seconds;
+        document.getElementById("timer-div").appendChild(displayElement)
 
         if (--timer == 0) {
-            clearInterval(intervalId); // Stop the interval
+            //clearInterval(intervalId); // Stop the interval
             endTestBasedonTimer()
         }
     }, 1000);
-    document.getElementById("timer-div").appendChild(displayElement)
+
+    if (timer == 0) {
+        clearInterval(intervalId); // Stop the interval
+    }
 }
+
 
 function endTestBasedonTimer() {
     var selectedOption = document.querySelector('input[name="option"]:checked');
