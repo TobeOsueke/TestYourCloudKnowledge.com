@@ -684,12 +684,12 @@ function displayScore() {
         questionAnswersElem.appendChild(document.createElement("br"));
     }
 
-    let homeLink = document.createElement("a");
-    homeLink.textContent = "Go Back To Home Page"
-    homeLink.href = "index.html"
-    questionAnswersElem.appendChild(homeLink)
+    // let homeLink = document.createElement("a");
+    // homeLink.textContent = "Go Back To Home Page"
+    // homeLink.href = "index.html"
+    // questionAnswersElem.appendChild(homeLink)
 
-    //document.getElementById("next-btn").disabled = true;
+ 
 }
 
 
