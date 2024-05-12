@@ -49,6 +49,64 @@ To use TestYourCloudKnowledge.com,
 - Read the Test instructions and click the start test button below the page.
 - Each quiz consists of multiple-choice questions related to cloud computing concepts. Users can select their answers and submit the quiz (within 15 minutes) to receive instant feedback on their performance.
 
+## Features
+Below are the features present in this website:
+
+- Home Page (https://tobeosueke.github.io/TestYourCloudKnowledge.com/index.html): This page contains the purpose and steps on how to use this website. It also and display a internal link to the registration page
+
+![Home Page Screen Shoot](asset/images/ReadMe_img/home.png)
+
+- User Registration: Users can register by entering their username at this url https://tobeosueke.github.io/TestYourCloudKnowledge.com/register.html. Note that the user name field must be filled before the form can be submit.
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/register.png)
+
+- Welcome Message: After registration a welcome message is displayed showing the user's username and two links to AWS and Azure testing zone respectively. Clicking on any these links will take you to the testing page of that service.
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/welcome.png)
+
+- Testing Zone: For both service providers testing zone, users must be registered before they can access it. 
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/testrules.png)
+
+- Start Test Button: The start test button is used to start the test. It triggers a confirmation alert for users to confirm that they are ready to begin test.
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/confirm.png)
+
+- Timer: Once the test is started, a timer is displayed on the page as shows on the below image. If the 15 minutes time elapse, the submit button is automatically triggered and the test will end.
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/timer.png)
+
+- Next Button: One Question is displayed at a time. Users can move to the next question, by clicking the next button.
+
+- Submit Button: When on the last question, the submit button is shown (replacing the Next button) for users to click and submit the test.
+
+![User Registration ScreenShoot](asset/images/ReadMe_img/submit.png)
+
+- Feedback: Upon clicking the submit button, the user's score, alongside all attempted questions, their answers, and the correct answers, are promptly displayed. This feature also highlights the questions the user answered correctly, providing clear feedback on their performance.
+
+## Design Section
+The following are the design considerations for this site:
+
+### Structure of all Pages: 
+This sites consist of four pages: home, registration, aws test zone and azure test zone.
+- All pages are divided(structured) into three: Header, Page Content, Footer
+- The header consist of site banner and page h1 title.
+- The page body are made up of text and images that are structured using div elements.
+- The footer consist of text under the semantic footer elemet.
+
+### Colour Scheme:
+1. body background colour white.
+2. Text colour: white, #8c3902 and #800020.
+3. Footer background colour: #0e3d53.
+
+## Technologies Used:
+1. HTML 
+2. CSS
+3. JavaScript
+4. IDE: Visual Studio Code
+5. Version Control: Git and GitHub
+6. Online Deployment: GitHub pages
+
 ## Contributing
 We welcome contributions from the community! If you'd like to contribute to TestYourCloudKnowledge.com, please follow these guidelines:
 - Fork the repository
@@ -71,7 +129,6 @@ TestYourCloudKnowledge.com was created by Tobe Osueke. We would like to acknowle
         const searchParams = new URLSearchParams(window.location.search);
         console.log(searchParams.has('user')); // true
 - Code Institues JavaScript Course was also helpful.
-- In building the timer feature (countdownTimer function in awsAzure.js file), ChatGPT was used
 
 ## TESTING
 The site was fully tested during the entire process of developemnt. Every features on each pages were tested. Below are list of test performed on each pages:
@@ -80,13 +137,23 @@ The site was fully tested during the entire process of developemnt. Every featur
 1. Image Responsiveness: All images were checked that they display well in different mobile device.
 2. Checking Each Divs (parent and child) are well floated.
 3. Link: Checked that all internal links open on same tab.
-4. Footer: Checked that the footer is well positioned. 
+4. Footer: Checked that the footer is well positioned at the button of the page for laptops and mobile screen size. 
 
 ### register.html Page
 1. Image Responsiveness: Header image were checked that they display well in different mobile device.
-2. Checked that each html elements are well positioned on different screen size (mobile, tab, laptop)
+2. Checked that each html elements (including images) are well positioned on different screen size (mobile, tab, laptop).
 3. Link: Checked that all internal links open on same tab.
 4. Register form: Checked that users are able to input name and the submit button sends the data for processing.
+5. Verified that the form cannot be submitted unless the username field is filled.
+
+### Testing Zone
+1. Ensured that users are unable to access any testing zone pages without registration. If a user attempts to access these pages without being registered, they are automatically redirected to the registration page.
+2. Checked that when the start test button is clicked the, confirmation alert box is displayed.
+3. Confirmed that when the user clicks "OK" on the confirmation dialog box, the test initiates, whereas selecting "Cancel" prevents the test from commencing.
+4. Confirmed that once the test commences, the timer is displayed, and each page presents one question.
+5. Verified that the "Next" button successfully transitions the user from one question to another.
+6. Confirmed that the test concludes automatically when the timer expires.
+7. Ensured that the "Submit Test" button functions as intended, displaying test results upon submission.
 
 ## FAQs
 ### How can I contribute a new quiz?
