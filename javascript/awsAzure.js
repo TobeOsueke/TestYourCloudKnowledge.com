@@ -5,7 +5,7 @@ function runOnPageLoad() {
     }
     userName = searchParams.get('user');
 }
-runOnPageLoad()
+runOnPageLoad();
 
 function userNameDisplay() {
     // Use template literals with backticks?
@@ -574,7 +574,7 @@ let userAnswers = [];
 let currentIndex = -1;
 let score = 0;
 let randomNumber = -1;
-let userQuestions = []
+let userQuestions = [];
 
 // function to display questions one at a time and capture tester response
 function showNextQuestion() {
@@ -639,7 +639,7 @@ function displayScore() {
     optionsDiv.remove();  //remove options div element
     let submitBtn = document.getElementById("submit-btn");
     submitBtn.remove();  //remove submit button div element
-    let timerDiv = document.getElementById("timer-div")
+    let timerDiv = document.getElementById("timer-div");
     timerDiv.remove();  //since test has ended, remove timer
 
     //display score
@@ -647,7 +647,7 @@ function displayScore() {
     scoreElem.textContent = "Out of 15 questions, you got " + score + " correct answers.";
 
 
-    let questionAnswersElem = document.getElementById("question-answers") //get parent div to contain/display questions and answers
+    let questionAnswersElem = document.getElementById("question-answers"); //get parent div to contain/display questions and answers
 
     //questions, user's answer and correct answer
     for (var i = 0; i < userQuestions.length; i++) {
@@ -671,7 +671,7 @@ function displayScore() {
         else {
             //first check if answer is undefined
             if (typeof userAnswer === "undefined") {
-                userAnswer = " "
+                userAnswer = " ";
             }
             icon.classList.add("wrong-icon");
             icon.textContent = "\u2717 Your Answer: " + userAnswer; //Unicode character for checkmark symbol
@@ -707,7 +707,7 @@ function countdownTimer(duration, displayElement) {
 
         if (--timer == 0) {
             clearInterval(intervalId); // Stop the interval
-            endTestBasedonTimer()
+            endTestBasedonTimer();
         }
     }, 1000);
 

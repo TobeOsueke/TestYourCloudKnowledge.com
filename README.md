@@ -155,6 +155,10 @@ The site was fully tested during the entire process of developemnt. Every featur
 6. Confirmed that the test concludes automatically when the timer expires.
 7. Ensured that the "Submit Test" button functions as intended, displaying test results upon submission.
 
+### Validator Test
+1. Using the official W3C validator (https://validator.w3.org/nu/#file) and Jigsaw validator (https://jigsaw.w3.org/css-validator/), both HTML and CSS files were checked. 
+2. JSHint command line utility was used to validate javascript code and ther was no significant issue.
+
 ## FAQs
 ### How can I contribute a new quiz?
 To contribute a new quiz, please follow these steps:
